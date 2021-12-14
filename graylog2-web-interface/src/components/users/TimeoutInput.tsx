@@ -100,11 +100,9 @@ const TimeoutInput = ({ value: propsValue, onChange }: Props) => {
               <Input type="number"
                      id="timeout"
                      placeholder="Timeout amount"
-                     className="validatable"
                      name="timeout"
                      min={1}
                      formGroupClassName="form-group no-bm"
-                     data-validate="positive_number"
                      disabled={sessionTimeoutNever}
                      value={value}
                      onChange={_onChangeValue} />
@@ -137,7 +135,8 @@ TimeoutInput.propTypes = {
 
 TimeoutInput.defaultProps = {
   value: MS_HOUR,
-  onChange: () => {},
+  onChange: () => {
+  },
 };
 
 export default TimeoutInput;
